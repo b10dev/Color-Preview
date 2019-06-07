@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=Color Preview
+Encoding=UTF-8
+Exec=/home/b10/Desktop/kivyprojects/colorpreview/TestColorPicker.py
+Icon=/home/b10/Desktop/kivyprojects/colorpreview/favico.png
+Type=Application
+Name[en_US]=Color Preview

@@ -1,0 +1,81 @@
+# Custom button -----------------------------------------------
+<ColorCodeInput@TextInput>
+    text:"0"
+    multiline: False
+    font_size: 32
+    background_color:(1,1,1,1)
+    write_tab: False
+    cursor_width: 10
+# Custom label-------------------------------------------------
+<ColorCodeLabel@Label>
+    font_size: 32
+# Root Widget--------------------------------------------------
+<RootWidget>:
+    id: colorbox
+    display: entry
+    color_value_one_text_root_kv: color_value_one_id
+    color_value_two_text_root_kv: color_value_two_id
+    color_value_three_text_root_kv: color_value_three_id
+    color_value_alpha_text_root_kv: color_value_alpha_id
+    cols: 1
+    # Layout---------------------------------------------------
+    BoxLayout:
+        size_hint_y:.4
+        size_hint_x:.4
+        Button:
+            id: entry
+            font_size: 32
+            background_color:(1,1,1,1)
+            text: "Enter a color value \n" + "to see a preview"
+    # Layout---------------------------------------------------
+    BoxLayout:
+        padding:20
+        spacing:1
+        size_hint_y:.1
+        size_hint_x:.1
+        spacing: 5
+        ColorCodeLabel:
+            text: 'Red'
+        ColorCodeLabel:
+            text: 'Green'
+        ColorCodeLabel:
+            text: 'Blue'
+        ColorCodeLabel:
+            text: "Alpha"
+    #Layout----------------------------------------------------
+    BoxLayout:
+        padding:20
+        spacing:1
+        size_hint_y:.2
+        size_hint_x:.2
+        spacing: 5
+        ColorCodeInput:
+            id: color_value_one_id
+            focus:True
+            cursor_color: (255,0,0,1)
+            on_text_validate: colorbox.change()
+        ColorCodeInput:
+            id: color_value_two_id
+            cursor_color: (0,255,0,1)
+            on_text_validate: colorbox.change()
+        ColorCodeInput:
+            id: color_value_three_id
+            cursor_color: (0,0,255,1)
+            on_text_validate: colorbox.change()
+        ColorCodeInput:
+            id: color_value_alpha_id
+            cursor_color: (0,0,0,1)
+            on_text_validate: colorbox.change()
+    # Layout---------------------------------------------------
+    BoxLayout:
+        padding:20
+        size_hint_y:.3
+        size_hint_x:.3
+        Button:
+            font_size:32
+            text: "Preview Color"
+            on_press: colorbox.change()
+
+
+
+

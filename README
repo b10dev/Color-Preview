@@ -1,0 +1,15 @@
+--------------------README----------------------
+	This was the first kivy app that I made under
+the b10 name.  It was also the first app that I 
+make with the Intel NUC.
+
+On the desktop, I made a file named color.desktop.
+
+In that file, I made the paths to the files.
+
+After that, I had to go into the terminal and 
+run the command:
+
+chmod +x color.desktop
+
+then, the file was executable.
